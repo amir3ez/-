@@ -1,23 +1,21 @@
 
-import React from 'react';
-
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
-
-export interface PortfolioItem {
-  id: string;
+export interface Project {
+  id: number;
   title: string;
   category: string;
-  imageUrl: string;
-  projectImages?: string[]; // مصفوفة لصور المشروع الإضافية
+  image: string;
+  additionalImages?: string[];
+  description: string;
+  client?: string;
+  goals?: string;
+  technologies?: string[];
 }
 
-export interface SocialLink {
-  platform: string;
-  url: string;
-  icon: React.ReactNode;
+export interface Service {
+  id: number;
+  title: string;
+  icon: string;
+  description: string;
 }
+
+export type Category = 'الكل' | 'هوية بصرية' | 'مواقع' | 'إعلانات' | 'مونتاج';
